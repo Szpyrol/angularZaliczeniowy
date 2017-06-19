@@ -1,0 +1,38 @@
+a{
+  display: none;
+  padding:600px;
+}
+#products
+{
+  text-align: center;
+}
+img{
+  width: inherit;
+}
+
+#product {
+
+  width: 40%;
+  border: 1px solid black;
+  padding:30px ;
+  margin: 5px;
+  text-align: center;
+  display:inline-block;
+  border-radius: 10px;
+
+  *display:inline; /*IE7*/
+  *zoom:1; /*IE7*/
+  background:#bdbdbd;
+  color:white;
+
+
+}
+h1
+{
+  border: 1px solid black;
+  margin: 100px;
+  width: auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}

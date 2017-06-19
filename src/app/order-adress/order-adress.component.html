@@ -1,0 +1,19 @@
+<p>
+  order-adress works!
+</p>
+
+<form [formGroup]="orderForm" (ngSubmit)="doBuy($event)">
+  Imie<br>
+  <input type="text" formControlName="firstName" placeholder="Twoje imie"><br>
+  Nazwisko<br>
+  <input type="text" formControlName="lastName" placeholder="Twoje nazwisko"><br>
+  Adres<br>
+  <input type="text" formControlName="adress" placeholder="Twój adres"><br>
+  Sposób płatności:<br>
+  <input type="checkbox" checked="checked">
+  Płatne przy odbiorze<br>
+
+
+  <button type="submit" value="Submit">Kupuję!</button>
+
+</form>

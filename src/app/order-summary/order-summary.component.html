@@ -1,0 +1,14 @@
+<h1>
+  Podsumowanie zamówienia<br>
+  Imię i nazwisko: {{firstName}} {{lastName}}<br>
+  Adress: {{adress}}<br>
+</h1>
+
+<div id="products">
+  <li  id="product"  *ngFor="let product of cartList" >
+    <img src={{product.imgUrl}} alt="Product img">
+    <h2>{{product.title}}</h2>
+    <p>Ilość: {{product.count}}</p>
+  </li>
+</div>
+

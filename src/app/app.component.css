@@ -1,0 +1,37 @@
+p {
+  float: right;
+  padding: 30px;
+
+  margin-bottom: 30px;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  *display: inline; /*IE7*/
+  *zoom: 1; /*IE7*/
+  background: blue;
+  color: white;
+}
+
+
+
+#cart{
+  color: white;
+  float: right;
+  padding: 30px;
+
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-align: center;
+  *display:inline; /*IE7*/
+  *zoom:1; /*IE7*/
+  background:blue;
+  color: white;
+
+
+
+}
+#title{
+
+  color: black;
+
+}

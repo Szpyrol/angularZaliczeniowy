@@ -1,0 +1,18 @@
+img{
+  width: inherit;
+}
+li {
+  border: 1px solid black;
+  padding:30px ;
+  margin: 5px;
+  text-align: center;
+
+  border-radius: 10px;
+  display:inline-block;
+  *display:inline; /*IE7*/
+  *zoom:1; /*IE7*/
+  background:blue;
+  color:white;
+
+
+}

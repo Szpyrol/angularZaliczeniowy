@@ -1,0 +1,21 @@
+<p>
+  dashboard works!
+</p>
+
+
+<div id="menu">
+  <li id="menu_item"  *ngFor="let category of categories" (click) = "categorySelected(category)" >
+
+    <h2>{{category.title}}</h2>
+
+  </li>
+</div>
+
+<div id="products">
+<li  id="product"  *ngFor="let product of products" >
+  <img src={{product.imgUrl}} alt="Product img">
+  <h2>{{product.title}}</h2>  {{product.description}}
+  <h2>{{product.price}} zł</h2>
+  <p> <button (click) = "productSelected(product)">Dodaj do koszyka</button></p>
+</li>
+</div>

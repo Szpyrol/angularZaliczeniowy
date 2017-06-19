@@ -1,0 +1,111 @@
+#zaloguj
+{
+  height: 30px;
+  padding: 40px;
+  text-align: center;
+  margin:40px ;
+  background-color: #4CAF50 ;
+  color: white;
+  border: 3px solid black;
+  color: white;
+  border-radius: 10px;
+  width: auto;
+
+}
+img{
+  width: inherit;
+}
+
+a{
+
+  color:white;
+
+}
+#suma{
+
+  margin-top: -10px;
+  height: 30px;
+  text-align: center;
+  width: 200px;
+  padding: 30px;;
+  background-color: blue ;
+  border: 1px solid black;
+  color: white;
+  border-radius: 10px;
+
+}
+#menu{
+  background-color: #bdbdbd;
+  border: 1px solid black;
+  text-align: center;
+  color:white;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+#menu_item {
+  width: 150px;
+  border: 2px solid black;
+  display:inline-block;
+  border-radius: 10px;
+  text-align: center;
+  *display:inline; /*IE7*/
+  *zoom:1; /*IE7*/
+  background:#4CAF50;
+  color:white;
+  font-size: 50%;
+  margin-left: 15px;
+}
+#products
+{
+  text-align: center;
+}
+#product {
+
+  width: 40%;
+  border: 1px solid black;
+  padding:30px ;
+  margin: 5px;
+  text-align: center;
+  display:inline-block;
+  border-radius: 10px;
+
+  *display:inline; /*IE7*/
+  *zoom:1; /*IE7*/
+  background:#bdbdbd;
+  color:white;
+
+
+}
+button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+p
+{
+  text-align:center;
+
+}
+#item_delete
+{
+  margin: auto;
+  padding:  10px;
+  width: 50%;
+  text-align: center;
+  background-color:#4CAF50;
+  border-radius: 6px;
+
+
+
+
+
+}

@@ -1,0 +1,12 @@
+<p>
+  products dzialaja!
+</p>
+
+<li *ngFor="let product of products" >
+  <img src={{product.imgUrl}} alt="Product img">
+  <h2>title : {{product.title}}</h2>  description :{{product.description}}
+  <h2>title : {{product.price}}</h2>
+
+  <p> <button (click) = "itemSelected(product)">Dodaj do koszyka</button></p>
+</li>
+

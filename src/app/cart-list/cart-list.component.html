@@ -1,0 +1,17 @@
+
+<h1 id="suma">
+    suma: {{this.suma}} zł
+</h1>
+
+<h1 id="zaloguj" (click)="goToSignUp()"><a>Zarejestruj i zakup</a></h1>
+
+
+
+<div id="products">
+  <li  id="product"  *ngFor="let product of cartList" >
+    <img src={{product.imgUrl}} alt="Product img">
+    <h2>{{product.title}}</h2>  {{product.description}}
+    <p>Ilość: {{product.count}}</p>
+    <p id="item_delete" (click)="deleteItem(product)" >Usuń sztukę</p>
+  </li>
+</div>
