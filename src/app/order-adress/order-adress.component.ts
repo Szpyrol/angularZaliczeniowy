@@ -4,6 +4,7 @@ import {Product} from "../product/product";
 import {ProductService} from "../product/product.service";
 import {OrderAdressService} from "../orderAdress/order-adress.service";
 import { FormBuilder,FormsModule, Validators } from '@angular/forms';
+import {FacebookService, InitParams, LoginResponse} from "ngx-facebook";
 
 @Component({
   selector: 'app-order-adress',
@@ -14,17 +15,43 @@ import { FormBuilder,FormsModule, Validators } from '@angular/forms';
 })
 export class OrderAdressComponent implements OnInit {
 
-  public orderForm = this.fb.group({
+  public orderForm = this.formBuilder.group({
     firstName: ["", Validators.required],
     lastName: ["", Validators.required],
     adress: ["", Validators.required]
   });
-  constructor(private cartService: CartService, public fb: FormBuilder, private  orderAdressService: OrderAdressService) {// fajna sprawa do pokazania
+  //private fb: FacebookService
+  constructor(private cartService: CartService, public formBuilder: FormBuilder, private  orderAdressService: OrderAdressService, private  fb:FacebookService) {// fajna sprawa do pokazania
 
 
+
+
+    let initParams: InitParams = {
+      appId: '1932787296934990',
+      xfbml: true,
+      version: 'v2.9'
+    };
+
+    fb.init(initParams);
+
+  }
+
+
+  loginWithFacebook(): void {
+
+    this.fb.login()
+      .then((response: LoginResponse) =>
+      {
+        console.log(response);
+        this.fb.api('/me/feed', 'post', {message: 'Hello, world!'});
+      }
+      )
+      .catch((error: any) => console.error(error));
 
 
   }
+
+
 
   ngOnInit() {
   }

@@ -22,7 +22,8 @@ import {OrderSummaryService} from "./orderSummary/order-summary.service";
 //import { CuppaOAuthModule } from 'cuppaOAuth/cuppaOAuth.module';
 //import  {Cuppa0AuthModule} from  './cu'
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {FacebookModule} from "ngx-facebook";
+//import { FacebookModule } from 'ngx-facebook';
 //import  {Ang}
 
 
@@ -46,6 +47,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
+    FacebookModule.forRoot(),
     //CuppaOAuthModule,
     RouterModule.forRoot([
 
