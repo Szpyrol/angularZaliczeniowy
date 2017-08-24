@@ -140,12 +140,20 @@ deleteItemFromArray(prod: Product)
 
   goToSignUp()
   {
+    //console.log("loginWithFacebook");
 
     this.updateSumInCart()
-    window.location.href = './orderAdress';
-
+   // window.location.href = './orderAdress';
+    window.location.href = 'http://localhost:9000/authenticate/google';
   }
+  goToFbSignUp()
+  {
+    //console.log("loginWithFacebook");
 
+    this.updateSumInCart()
+    // window.location.href = './orderAdress';
+    window.location.href = 'http://localhost:9000/authenticate/facebook';
+  }
 
 
   ngOnInit() {

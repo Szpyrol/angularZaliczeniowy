@@ -5,15 +5,19 @@ import {ProductService} from "../product/product.service";
 import {OrderAdressService} from "../orderAdress/order-adress.service";
 import { FormBuilder,FormsModule, Validators } from '@angular/forms';
 import {FacebookService, InitParams, LoginResponse} from "ngx-facebook";
+import {ActivatedRoute} from "@angular/router";
+import {AuthHandlerService} from "../auth-handler/auth-handler.service";
+import {UserData} from "../auth-handler/UserData";
 
 @Component({
   selector: 'app-order-adress',
   templateUrl: './order-adress.component.html',
   styleUrls: ['./order-adress.component.css'],
-  providers:[CartService,ProductService, OrderAdressService]
+  providers:[CartService,ProductService, OrderAdressService,AuthHandlerService]
 
 })
 export class OrderAdressComponent implements OnInit {
+
 
   public orderForm = this.formBuilder.group({
     firstName: ["", Validators.required],
@@ -21,25 +25,35 @@ export class OrderAdressComponent implements OnInit {
     adress: ["", Validators.required]
   });
   //private fb: FacebookService
-  constructor(private cartService: CartService, public formBuilder: FormBuilder, private  orderAdressService: OrderAdressService, private  fb:FacebookService) {// fajna sprawa do pokazania
+  constructor(private cartService: CartService, public formBuilder: FormBuilder, private  orderAdressService: OrderAdressService, private  fb:FacebookService, private route: ActivatedRoute, private auth: AuthHandlerService) {// fajna sprawa do pokazania
 
 
 
+   // fb.init(initParams);
 
-    let initParams: InitParams = {
-      appId: '1932787296934990',
-      xfbml: true,
-      version: 'v2.9'
-    };
+    console.log("construcot in order adress! ")
+    var  code = this.route.snapshot.queryParams["code"];
+    var provider = this.route.snapshot.queryParams["provider"]
+  //./  this.categoriesService.getCategories().subscribe(data => this.categories = data);
+  this.auth.getUserData(code,provider).subscribe(response =>
+  {
+    var user: UserData = <UserData> response // console.log(response)
 
-    fb.init(initParams);
+    this.orderForm.controls['firstName'].setValue(user.firstName )
+    this.orderForm.controls['lastName'].setValue(user.lastName )
+
+
+
+  })
+
+
 
   }
 
 
   loginWithFacebook(): void {
 
-    this.fb.login()
+/*    this.fb.login()
       .then((response: LoginResponse) =>
       {
         console.log(response);
@@ -47,6 +61,10 @@ export class OrderAdressComponent implements OnInit {
       }
       )
       .catch((error: any) => console.error(error));
+*/
+    console.log("loginWithFacebook");
+    window.location.href = 'http://localhost:9000/authenticate/google';
+
 
 
   }

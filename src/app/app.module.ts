@@ -23,6 +23,7 @@ import {OrderSummaryService} from "./orderSummary/order-summary.service";
 //import  {Cuppa0AuthModule} from  './cu'
 import { ReactiveFormsModule } from '@angular/forms';
 import {FacebookModule} from "ngx-facebook";
+import {AuthHandlerService} from "./auth-handler/auth-handler.service";
 //import { FacebookModule } from 'ngx-facebook';
 //import  {Ang}
 
@@ -39,6 +40,7 @@ import {FacebookModule} from "ngx-facebook";
     CartListComponent,
     OrderAdressComponent,
     OrderSummaryComponent,
+
 
 
   ],
@@ -68,7 +70,8 @@ import {FacebookModule} from "ngx-facebook";
     CartService,
     CookieService,
     OrderAdressService,
-    OrderSummaryService
+    OrderSummaryService,
+    AuthHandlerService,
   ],
   bootstrap: [AppComponent]
 })

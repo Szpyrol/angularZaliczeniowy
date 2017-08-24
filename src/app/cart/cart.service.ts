@@ -117,6 +117,9 @@ export class CartService {
 
   }
 
+
+
+
   sendOrder(userData:any): Observable<Map<string,string>> {
 
 
@@ -140,7 +143,7 @@ export class CartService {
     var ordered: OrderCart;// = new Order();
     ordered = new OrderCart();
     ordered.orderId = 0;
-    ordered.userName = userData["firstName"] + " " +userData["firstName"]
+    ordered.userName = userData["firstName"] + " " +userData["lastName"]
     ordered.prodsList =  JSON.stringify(this.getCookieProducts()).toString()
     ordered.adress = userData["adress"]
 
